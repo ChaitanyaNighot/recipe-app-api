@@ -1,0 +1,5 @@
+docker-compose build
+docker-compose run app sh -c "django-admin.py startproject app ."
+docker-compose run app sh -c "python manage.py test"
+docker-compose run app sh -c "python manage.py startaap core"
+docker-compose run app sh -c "python manage.py makemigrations core"
